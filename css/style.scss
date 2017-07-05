@@ -1,0 +1,149 @@
+@import "compass";
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+body{
+  color:$fontColor;
+  font-size:1.4rem;
+  line-height:1.6;
+  letter-spacing:0.1em;
+  background-color:$baseColor;
+}
+
+
+.text-center{
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+header{
+  .profile{
+    height:500px;
+    background-image: url(../images/mc.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media(max-width:768px){
+header{
+  .profile{
+    height:250px;
+  }
+}
+  
+}
+
+//desktop
+@media(min-width:1025px){
+  a{
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+
+.button-contact{
+  &:hover,&:active{
+    background-color:$fontColor;
+    color:#FFF;
+  }
+}
+
+section{
+  padding:60px 0;
+  .container{
+    width:90%;
+    @extend .block-center;
+}
+  h2{
+    font-size:3.2rem;
+  }
+}
+  #skills{
+    .container{
+      @include display-flex;
+      justify-content:space-between;
+      @include flex-direction(column);
+    }
+  h2{
+    color:$fontColor;
+    margin:60px;
+  }
+  .skill-box{
+    @include flex(1);
+    margin:10px 0;
+    padding:20px;
+    
+  .skills-text{
+    background-color: #FF9999;
+    margin: 0;
+    vertical-align: middle;
+    padding-top:20px;
+    padding-bottom:50px;
+  }
+  .skills-title{
+    background-color:$subColor;
+    padding-top:20px;
+    padding-bottom:10px;
+    margin:0;
+    vertical-align: middle;
+  }
+    
+  }
+  
+  }
+  // desktop
+@media (min-width: 1025px) {
+
+#skills{
+  .container{
+    @include flex-direction(row);
+    justify-content:space-between;
+  }
+  .skill-box{
+    margin:0 10px;
+  }
+}
+}
+
+
+
+//contact
+#contact{
+  background-color: black;
+  padding-top:30px;
+  .contact-title{
+    color: #FFF;
+    text-align: center;
+  }
+  .contact-button{
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    background-color: $baseColor;
+    width: 100px;
+    @include border-radius(4px);
+  }
+}
+
+
